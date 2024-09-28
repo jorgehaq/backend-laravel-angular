@@ -14,7 +14,4 @@ yarn-error.log
 venv/
 bootstrap/cache
 /storage/sessions
-/database/*
-!database/migrations
-!database/seeds
 *.log
