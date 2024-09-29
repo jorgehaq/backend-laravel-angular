@@ -1,24 +1,70 @@
 <?php
 
 return [
+    /*
+    |--------------------------------------------------------------------------
+    | Allowed Origins
+    |--------------------------------------------------------------------------
+    |
+    | The origins that are allowed to access your application.
+    |
+    */
+    'paths' => ['clientes/*'],
+
+    'origins' => ['*'], // Permite todos los orígenes
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel CORS
+    | Allowed Methods
     |--------------------------------------------------------------------------
     |
-    | allowedOrigins, allowedHeaders and allowedMethods can be set to array('*')
-    | to accept any value.
+    | The methods that are allowed to access your application.
     |
     */
-   
-    'supportsCredentials' => false,
-    'allowedOrigins' => ['*'],
-    'allowedOriginsPatterns' => [],
-    'allowedHeaders' => ['*'],
-    'allowedMethods' => ['*'],
-    'exposedHeaders' => [],
-    'maxAge' => 0,
-    'paths' => ['api/*'],
 
+    'methods' => ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Allowed Headers
+    |--------------------------------------------------------------------------
+    |
+    | The headers that are allowed to be accessed on the request.
+    |
+    */
+
+    'allowedHeaders' => ['Content-Type', 'Authorization', 'X-Requested-With','Access-Control-Allow-Origin'],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Exposed Headers
+    |--------------------------------------------------------------------------
+    |
+    | The headers that are allowed to be exposed on the response.
+    |
+    */
+
+    'exposedHeaders' => [],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Max Age
+    |--------------------------------------------------------------------------
+    |
+    | The number of seconds the browser should cache preflight response.
+    |
+    */
+
+    'maxAge' => 0,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Credentials
+    |--------------------------------------------------------------------------
+    |
+    | Whether you want to allow credentials in the request or not.
+    |
+    */
+
+    'credentials' => false,
 ];
